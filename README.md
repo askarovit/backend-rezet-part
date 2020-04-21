@@ -12,8 +12,8 @@ Go to the root of the project and execute the command :
 $ docker-compose up --build -d
 ```
 Afrer that created two Docker containers:
---- ***reverse_proxy_nginx***
---- ***backendpart***
+- ***reverse_proxy_nginx***
+- ***backendpart***
 
 **reverse_proxy_nginx** - implements the following features:
 - http2
@@ -21,6 +21,7 @@ Afrer that created two Docker containers:
 - cache static files
 - proxy to backend API
 - storing images
+
 **backendpart** - implements the following features:
 - api for Front-end
 - requests to mockAPI
