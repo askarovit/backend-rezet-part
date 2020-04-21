@@ -1,0 +1,20 @@
+version: '3.2'
+
+services:
+    reverse_proxy_nginx:
+        build: .
+        restart: always
+        container_name: reverse_proxy_nginx
+        ports:
+         - "9871:433"
+
+    backendpart:
+        build: ../server/.
+        container_name: backendpart
+        restart: always
+        ports:
+          - "9996:9996"
+        links:
+          - reverse_proxy_nginx
+
+

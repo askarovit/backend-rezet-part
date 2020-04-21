@@ -1,0 +1,11 @@
+version: '3.2'
+
+services:
+    backend_task:
+        build: .
+        restart: always
+        environment:
+           - PROD_PORT=${PORT}
+           - ENV=${ENV}
+        ports:
+          - ${PORT}:${PORT}

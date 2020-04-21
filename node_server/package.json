@@ -1,0 +1,27 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "start": "rm -rf ./dist && npm run tsc && node ./dist/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "_moduleAliases": {
+    "@route-layer": "dist/src/routes/index.js",
+    "@shared": "dist/src/shared"
+  },
+  "dependencies": {
+    "@types/node": "^13.13.0",
+    "axios": "^0.19.2",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}
