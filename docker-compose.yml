@@ -9,12 +9,10 @@ services:
          - "9871:433"
 
     backendpart:
-        build: ./node_server/.
+        build: ./server/.
         container_name: backendpart
         restart: always
         ports:
           - "9996:9996"
         links:
           - reverse_proxy_nginx
-
-
