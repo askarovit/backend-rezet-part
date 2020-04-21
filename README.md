@@ -27,4 +27,8 @@ Afrer that created two Docker containers:
 - requests to mockAPI
 - business logic
 
-Also I have been implemented route layer  in the form of decorators on the TypeScript.
+Also I have been implemented route layer in the form of decorators on the TypeScript.
+I wanted to try a new approach for routing, as implemented in the Spring Java (Boot) through decorated.
+
+`@Controller(<string>)` - adds module prefix
+`@GET | @POST | @PUT | @DELETE ` - adds REST API method

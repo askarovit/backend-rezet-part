@@ -1,6 +1,6 @@
 import express, { Application }  from 'express';
 import { json, urlencoded } from 'body-parser';
-import cors  from 'cors';
+import cors from 'cors';
 
 const WHITE_LIST = [
   'https://localhost:433'
