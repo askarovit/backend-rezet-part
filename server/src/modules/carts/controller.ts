@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, Response, Next } from 'express';
 import { Controller, GET, POST } from '@route-layer';
 import * as service from  './service';
 
@@ -6,13 +6,13 @@ import * as service from  './service';
 class CartsController {
 
   @GET('/')
-  async getCarts(req: Request, res: Response, next) {
-     try {
-       const { data } = await service.getListCarts();
-       res.json({ data })
-     } catch {
-       next(new Error('Can\'t get carts'));
-     }
+  async getCarts(req: Request, res: Response, next: Next) {
+    try {
+      const { data } = await service.getListCarts();
+      res.json({ data })
+    } catch(err) {
+      next(err.message);
+    }
   }
 
   @POST('/makepayment')
