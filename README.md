@@ -16,14 +16,14 @@ Afrer that created two Docker containers:
 --- ***backendpart***
 
 **reverse_proxy_nginx** - implements the following features:
-    - http2
-    - ssl
-    - cache static files
-    - proxy to backend API
-    - storing images
+- http2
+- ssl
+- cache static files
+- proxy to backend API
+- storing images
 **backendpart** - implements the following features:
-    - api for Front-end
-    - requests to mockAPI
-    - business logic
+- api for Front-end
+- requests to mockAPI
+- business logic
 
 Also I have been implemented route layer  in the form of decorators on the TypeScript.
